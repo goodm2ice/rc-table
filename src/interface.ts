@@ -72,9 +72,9 @@ export type SpecialString<T> = T | (string & {});
 
 export type DataIndex<T = any> =
   | DeepNamePath<T>
-  | SpecialString<T>
+  | SpecialString<keyof T>
   | number
-  | (SpecialString<T> | number)[];
+  | (SpecialString<keyof T> | number)[];
 
 export type CellEllipsisType = { showTitle?: boolean } | boolean;
 
